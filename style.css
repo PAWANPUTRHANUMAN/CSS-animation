@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital@0;1&family=Montserrat+Alternates:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700&family=Poppins:wght@400;700&family=Roboto:wght@100&family=Ubuntu&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	width: 100%;
+	height:100vh;
+	font-family: 'Arimo', sans-serif;
+
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 80px 0 ;
+
+}
+.parallel-text{
+	position: absolute;
+	font-family: 'Arimo', sans-serif;
+font-family: 'Montserrat Alternates', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+font-size:5vw;
+font-style:italic ;
+}
+img{
+	width: 50vw;
+	animation: Rakesh 2s cubic-bezier(0.25, 1, 0.45, 1) infinite alternate;
+
+}
+.parallel-text:after{
+	content: attr(text);
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: transparent;
+	-webkit-text-stroke: 0.15vw green;
+}
+
+@keyframes Rakesh {
+	0% ,10%{
+		transform: translate(100vw,0) rotate(15deg);
+	}
+	90%,100%{
+		transform: translate(-3vw,-5vw) rotate(-15deg);
+	}
+	
+}
